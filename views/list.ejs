@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+<div class="heading">
+<h1 style="color: rgb(255, 255, 255);"><%= kindofday %></h1>
+</div>
+<div id="todo">
+<ul class="list">
+    <!-- <li><%= tasks %></li> -->
+<%    for(let i=0;i< tasks.length;i++){ %>
+    <li>
+    <label class="Container">
+        <input type="checkbox" class="cb">
+        <%=tasks[i]%>
+      </label>
+    </li>
+<%    } %>
+</ul>
+<form class="" action="/" method="post">
+    <input type="text" placeholder="Enter a task" name="task">
+    <button type="submit" class="btn" name="add" value=<%= kindofday %>>&plus;</button>
+</form>
+</div>
+</div>
+</body>
+<script src="/javascript/index.js"></script>
+</html>
